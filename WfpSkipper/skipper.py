@@ -50,7 +50,7 @@ class UrlSkipper():
 
         #r.cookies -> ['bck', 'dm', 'lang', 'online', 'visitor']
 
-        soup = bs(r.text, 'lxml')
+        soup = bs(r.text, 'html.parser')
 
         try:
 
@@ -205,7 +205,7 @@ class UrlSkipper():
         
         )
 
-        soup = bs(r.text, "lxml")
+        soup = bs(r.text, "html.parser")
 
         ####################################
         
@@ -244,7 +244,7 @@ class UrlSkipper():
             
             )
 
-            soup = bs(rr.text, "lxml")
+            soup = bs(rr.text, "html.parser")
 
             csrf, tkn, TokenFields, TokenUnlocked, AdFormData = utils.PndTlReqs(soup, True)
 
@@ -330,7 +330,7 @@ class UrlSkipper():
         
         )
 
-        soup = bs(r.text, "lxml")
+        soup = bs(r.text, "html.parser")
 
         try:
 
@@ -373,7 +373,7 @@ class UrlSkipper():
 
         )
 
-        soup = bs(rr.text, 'lxml')
+        soup = bs(rr.text, 'html.parser')
         url = soup.find('a').attrs['href']
         
         return url
