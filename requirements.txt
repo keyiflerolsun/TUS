@@ -1,5 +1,4 @@
 pyrogram
 colorama
 requests
-lxml
 bs4
